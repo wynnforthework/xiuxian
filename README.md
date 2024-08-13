@@ -1,8 +1,7 @@
 # 工作室
-<img src=Arts/logo.png  />
+<img src=Assets/Art/logo.png  />
 
-### B站UP主
-独立游戏制作人
+> B站UP主，独立游戏制作人
 
 ### 进度
 《勇士为了拯救公主穿越多元宇宙的途中遇到美少女的不幸旅途》开发中
