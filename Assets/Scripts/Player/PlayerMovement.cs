@@ -10,11 +10,13 @@ public class PlayerMovement : MonoBehaviour
     public float lastHorizontalVector { get; private set; }
     public float lastVerticalVector { get; private set; }
     public Vector2 moveDir { get; private set; }
+    public Vector2 lastMoveVector { get; private set; }
     
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        lastMoveVector = new Vector2(1, 0f);
     }
 
     // Update is called once per frame
@@ -38,11 +40,18 @@ public class PlayerMovement : MonoBehaviour
         if (moveDir.x != 0)
         {
             lastHorizontalVector = moveDir.x;
+            lastMoveVector = new Vector2(lastHorizontalVector, 0f);
         }
 
         if (moveDir.y != 0)
         {
             lastVerticalVector = moveDir.y;
+            lastMoveVector = new Vector2(0f, lastVerticalVector);
+        }
+
+        if (moveDir.x != 0 && moveDir.y != 0)
+        {
+            lastMoveVector = new Vector2(lastHorizontalVector, lastVerticalVector);
         }
     }
 
