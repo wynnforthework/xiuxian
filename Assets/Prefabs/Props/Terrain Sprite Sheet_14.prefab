@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6305258685670193308}
   - component: {fileID: 1535426317232413945}
   - component: {fileID: 8150853642501866310}
+  - component: {fileID: -1256371937365100257}
   m_Layer: 0
   m_Name: Terrain Sprite Sheet_14
   m_TagString: Untagged
@@ -130,3 +131,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-1256371937365100257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8731215400005224119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50cb95aba37fcb2459b332f3d6944b4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10

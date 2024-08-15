@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3982585659135969840}
   - component: {fileID: -6609909786120666690}
   - component: {fileID: 4576760802670964378}
+  - component: {fileID: -2257633367920042841}
   m_Layer: 0
   m_Name: Bat
   m_TagString: Enemy
@@ -180,3 +181,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyData: {fileID: 11400000, guid: 84b529fe2df652e45b9b51726d333b09, type: 2}
+--- !u!114 &-2257633367920042841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3837317461165786420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be6d83c68b90e9b458feef175eb62f20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drops:
+  - name: Blue gem
+    itemPrefab: {fileID: 1692613416431541119, guid: 6727030d34afe354aa470f32538e76ed,
+      type: 3}
+    dropRate: 50

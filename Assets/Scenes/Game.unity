@@ -399,6 +399,7 @@ GameObject:
   - component: {fileID: 1665581853}
   - component: {fileID: 1665581858}
   - component: {fileID: 1665581859}
+  - component: {fileID: 1665581860}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -418,7 +419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee11fb48806caa54b8f48a6da1967a01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  characterData: {fileID: 11400000, guid: 1c8f4590fdbcf924c862ef58ccd752f5, type: 2}
 --- !u!61 &1665581854
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -593,6 +594,30 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1665581860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665581852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fedc0e3af9b728b47b7f2dd19ac3b225, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterData: {fileID: 11400000, guid: 1c8f4590fdbcf924c862ef58ccd752f5, type: 2}
+  experience: 0
+  level: 1
+  experienceCap: 100
+  invincibilityDuration: 0
+  levelRanges:
+  - startLevel: 1
+    endLevel: 3
+    experienceCapIncrease: 100
+  - startLevel: 4
+    endLevel: 5
+    experienceCapIncrease: 200
 --- !u!1001 &1918694545
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -604,7 +629,12 @@ PrefabInstance:
     - target: {fileID: -6609909786120666690, guid: b877818c151eb7242a72118d3251c647,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2257633367920042841, guid: b877818c151eb7242a72118d3251c647,
+        type: 3}
+      propertyPath: drops.Array.data[0].dropRate
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2436910576585286669, guid: b877818c151eb7242a72118d3251c647,
         type: 3}
