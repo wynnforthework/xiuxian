@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1693005065379207059}
   - component: {fileID: -8131830831747142468}
   - component: {fileID: -3283545869722672723}
+  - component: {fileID: -3880070808117607764}
   m_Layer: 0
   m_Name: Terrain Sprite Sheet_4
   m_TagString: Untagged
@@ -144,3 +145,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
+--- !u!114 &-3880070808117607764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5527553475771334249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be6d83c68b90e9b458feef175eb62f20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drops:
+  - name: Red potion
+    itemPrefab: {fileID: 7574353382178209131, guid: 36ab513136f6b574f95b43120b5b177d,
+      type: 3}
+    dropRate: 50

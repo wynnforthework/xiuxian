@@ -103,4 +103,16 @@ public class PlayerStats : MonoBehaviour
     {
         Debug.Log("PLAYER IS DEAD");
     }
+
+    public void RestoreHealth(float amount)
+    {
+        if (currentHealth<characterData.MaxHealth)
+        {
+            currentHealth += amount;
+            if (currentHealth > characterData.MaxHealth)
+            {
+                currentHealth = characterData.MaxHealth;
+            }
+        }
+    }
 }
