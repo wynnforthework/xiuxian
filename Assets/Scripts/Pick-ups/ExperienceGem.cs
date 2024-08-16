@@ -1,8 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ExperienceGem : MonoBehaviour, ICollectible
+public class ExperienceGem : Pickup, ICollectible
 {
     public int experienceGranted;
     

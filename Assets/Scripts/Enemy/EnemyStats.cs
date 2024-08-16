@@ -8,9 +8,9 @@ public class EnemyStats : MonoBehaviour
 {
     public EnemyScriptableObject enemyData;
 
-    private float currentMoveSpeed;
-    private float currentHealth;
-    private float currentDamage;
+    public float currentMoveSpeed { get; private set; }
+    public float currentHealth { get; private set; }
+    public float currentDamage { get; private set; }
 
     void Awake()
     {
