@@ -15,7 +15,7 @@ public class CharacterScriptObject : ScriptableObject
     }
 
     [SerializeField]
-    private string name;
+    private new string name;
 
     public string Name
     {

@@ -31,6 +31,21 @@ public class PassiveItemScriptableObject : ScriptableObject
         private set => nextLevelPrefab = value;
     }
     
+    public string Name
+    {
+        get => name;
+        private set => name = value;
+    }
+
+    [SerializeField]
+    private string description;
+
+    public string Description
+    {
+        get => description;
+        private set => description = value;
+    }
+
     [SerializeField]
     Sprite icon;
 
