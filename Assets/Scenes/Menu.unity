@@ -193,7 +193,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Select Knife
+  m_Text: Select Garlic
 --- !u!222 &305624752
 CanvasRenderer:
   m_ObjectHideFlags: 0
