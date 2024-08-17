@@ -5,21 +5,38 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "PassiveItemScriptableObject", menuName = "ScriptableObject/Passive Item")]
 public class PassiveItemScriptableObject : ScriptableObject
 {
+    [SerializeField]
     private float multipler;
     public float Multipler
     {
         get => multipler;
         private set => multipler = value;
     }
-    // Start is called before the first frame update
-    void Start()
+
+    [SerializeField]
+    int level;
+
+    public int Level
     {
-        
+        get => level;
+        private set => level = value;
     }
 
-    // Update is called once per frame
-    void Update()
+    [SerializeField]
+    GameObject nextLevelPrefab;
+
+    public GameObject NextLevelPrefab
     {
-        
+        get => nextLevelPrefab;
+        private set => nextLevelPrefab = value;
+    }
+    
+    [SerializeField]
+    Sprite icon;
+
+    public Sprite Icon
+    {
+        get => icon;
+        private set => icon = value;
     }
 }

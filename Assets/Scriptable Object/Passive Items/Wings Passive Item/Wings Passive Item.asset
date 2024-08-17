@@ -9,14 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5eea7272163020243aed0a069624b46e, type: 3}
-  m_Name: Garlic Character
+  m_Script: {fileID: 11500000, guid: bc4bb8bb0078efd44a501361e8f6f5dd, type: 3}
+  m_Name: Wings Passive Item
   m_EditorClassIdentifier: 
-  startingWeapon: {fileID: 7552359929641438082, guid: f6ed5fd9f18a1b847a156465f3ec0269,
+  multipler: 50
+  level: 1
+  nextLevelPrefab: {fileID: 644221158974843819, guid: 4da14735a95fef84ab754b729a39711b,
     type: 3}
-  maxHealth: 1000
-  recovery: 1
-  moveSpeed: 5
-  might: 1
-  projectileSpeed: 0
-  magnet: 1.6
+  icon: {fileID: 1143330428, guid: 50f20fa6a08161b4b9bf49cacb9a1103, type: 3}
