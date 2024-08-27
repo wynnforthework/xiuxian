@@ -133,7 +133,7 @@ public class PlayerStats : MonoBehaviour
     public Image healthBar;
 
     public Image expBar;
-    public Text levelText;
+    public TMPro.TMP_Text levelText;
 
     public List<LevelRange> levelRanges;
 

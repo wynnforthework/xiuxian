@@ -33,8 +33,8 @@ public class InventoryManager : MonoBehaviour
     [Serializable]
     public class UpgradeUI
     {
-        public Text upgradeNameDisplay;
-        public Text upgradeDescriptionDisplay;
+        public TMPro.TMP_Text upgradeNameDisplay;
+        public TMPro.TMP_Text upgradeDescriptionDisplay;
         public Image upgradeIcon;
         public Button upgradeButton;
     }
