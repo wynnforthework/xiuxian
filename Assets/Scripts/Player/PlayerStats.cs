@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -128,6 +129,12 @@ public class PlayerStats : MonoBehaviour
     private float invincibilityTimer;
     private bool isInvincible;
 
+    [Header("UI")]
+    public Image healthBar;
+
+    public Image expBar;
+    public Text levelText;
+
     public List<LevelRange> levelRanges;
 
     private InventoryManager inventory;
@@ -151,8 +158,8 @@ public class PlayerStats : MonoBehaviour
         CurrentMagnet = characterData.Magnet;
         
         SpawnWeapon(characterData.StartingWeapon);
-        SpawnPassiveItem(firstPassiveItemTest);
-        SpawnPassiveItem(secondPassiveItemTest);
+        // SpawnPassiveItem(firstPassiveItemTest);
+        // SpawnPassiveItem(secondPassiveItemTest);
     }
 
     void Start()
@@ -167,6 +174,8 @@ public class PlayerStats : MonoBehaviour
         GameManager.instance.currentMagnetDisplay.text = "Magnet: " + currentMagnet;
 
         GameManager.instance.AssignChosenCharacterUI(characterData);
+        
+        UpdateHealthBar();
     }
 
     void Update()
@@ -187,13 +196,15 @@ public class PlayerStats : MonoBehaviour
     {
         experience += amount;
         LevelUpChecker();
+        UpdateExpBar();
+        UpdateLevelText();
     }
 
     void LevelUpChecker()
     {
         if (experience >= experienceCap)
         {
-            level++;
+            level++; 
             experience -= experienceCap;
 
             int experienceCapIncrease = 0;
@@ -205,9 +216,19 @@ public class PlayerStats : MonoBehaviour
                 }
             }
             experienceCap += experienceCapIncrease;
-            
+            UpdateLevelText();
             GameManager.instance.StartLevelUp();
         }
+    }
+
+    void UpdateExpBar()
+    {
+        expBar.fillAmount = (float) experience / experienceCap;
+    }
+
+    void UpdateLevelText()
+    {
+        levelText.text = "LV " + level.ToString();
     }
 
     public void TakeDamage(float dmg)
@@ -221,7 +242,14 @@ public class PlayerStats : MonoBehaviour
             {
                 Kill();
             }
+            
+            UpdateHealthBar();
         }
+    }
+
+    void UpdateHealthBar()
+    {
+        healthBar.fillAmount = currentHealth / characterData.MaxHealth;
     }
 
     public void Kill()

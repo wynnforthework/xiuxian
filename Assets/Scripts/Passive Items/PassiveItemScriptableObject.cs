@@ -31,6 +31,8 @@ public class PassiveItemScriptableObject : ScriptableObject
         private set => nextLevelPrefab = value;
     }
     
+    [SerializeField]
+    private new string name;
     public string Name
     {
         get => name;
