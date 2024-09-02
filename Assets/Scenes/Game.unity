@@ -6725,6 +6725,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fedc0e3af9b728b47b7f2dd19ac3b225, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageEffect: {fileID: 127312846389848817, guid: fe74ae3799f6ba540a5f27e01084ec74,
+    type: 3}
   experience: 0
   level: 1
   experienceCap: 100
