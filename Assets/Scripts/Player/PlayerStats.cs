@@ -128,20 +128,16 @@ public class PlayerStats : MonoBehaviour
     public float invincibilityDuration;
     private float invincibilityTimer;
     private bool isInvincible;
-
-    [Header("UI")]
-    public Image healthBar;
-
-    public Image expBar;
-    public TMPro.TMP_Text levelText;
-
     public List<LevelRange> levelRanges;
 
     private InventoryManager inventory;
     public int weaponIndex;
     public int passiveItemIndex;
-    
-    public GameObject firstPassiveItemTest, secondPassiveItemTest;
+
+    [Header("UI")]
+    public Image healthBar;
+    public Image expBar;
+    public TMPro.TMP_Text levelText;
 
     void Awake()
     {
@@ -158,8 +154,6 @@ public class PlayerStats : MonoBehaviour
         CurrentMagnet = characterData.Magnet;
         
         SpawnWeapon(characterData.StartingWeapon);
-        // SpawnPassiveItem(firstPassiveItemTest);
-        // SpawnPassiveItem(secondPassiveItemTest);
     }
 
     void Start()
